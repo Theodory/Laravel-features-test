@@ -8,11 +8,13 @@ use File;
 class ProductController extends Controller
 {
 	/**
-	 * Redirect home
+	 * Home
 	 * @return illuminate/Http/View
 	 */
 	public function index(){
+
 		$products = json_decode(file_get_contents(public_path() . '/products.json'));
+		
 		return view('products',compact('products'));
 	}
 
