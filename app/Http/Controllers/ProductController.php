@@ -22,8 +22,8 @@ class ProductController extends Controller
      public function store(Request $request){
      	$this->validate($request,[
      		'product_name' => 'required|min:3|max:255',
-     		'quantity_in_stock' => 'required|digits:3|min:3|max:255',
-     		'price_per_item' => 'required|digits:3|min:3|max:255',
+     		'quantity_in_stock' => 'required|numeric|min:3|max:255',
+     		'price_per_item' => 'required|numeric|min:3|max:255',
      	]);
 
 
