@@ -38,9 +38,10 @@ class ProductController extends Controller
     	array_push($product, $today);
      	 //push new product into existing products array
     	array_push($products, $product);
+    	//Save products into json file
     	File::put('products.json', json_encode($products));
 
 
-    	return back();
+    	return back()->with('success','Product created successfully!');
     }
 }
