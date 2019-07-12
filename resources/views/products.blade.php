@@ -15,9 +15,9 @@
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('custom.inputs.product_name') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                <input id="product_name" type="text" class="form-control @error('product_name') is-invalid @enderror" name="product_name" value="{{ old('product_name') }}" required autocomplete="product_name" autofocus>
 
-                                @error('name')
+                                @error('product_name')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
@@ -26,12 +26,12 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('custom.inputs.quantity_in_stock') }}</label>
+                            <label for="quantity_in_stock" class="col-md-4 col-form-label text-md-right">{{ __('custom.inputs.quantity_in_stock') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                <input id="quantity_in_stock" type="number" class="form-control @error('quantity_in_stock') is-invalid @enderror" name="quantity_in_stock" value="{{ old('quantity_in_stock') }}" required autocomplete="quantity_in_stock">
 
-                                @error('email')
+                                @error('quantity_in_stock')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
@@ -40,12 +40,12 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('custom.inputs.price_per_item') }}</label>
+                            <label for="price_per_item" class="col-md-4 col-form-label text-md-right">{{ __('custom.inputs.price_per_item') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                <input id="price_per_item" type="number" class="form-control @error('price_per_item') is-invalid @enderror" name="price_per_item" required autocomplete="new-price_per_item">
 
-                                @error('password')
+                                @error('price_per_item')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
