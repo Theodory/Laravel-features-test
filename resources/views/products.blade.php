@@ -88,12 +88,26 @@
                       </tr>
                   </thead>
                   <tbody>
+                    @php
+                     $sum = 0;
+                    @endphp
+                    @foreach($products as $key=>$product)
+                     @php
+                     $product_sum = $product->quantity_in_stock * $product->price_per_item;
+
+                     $sum +=$product_sum;
+                    @endphp
                     <tr>
-                      <th scope="row">1</th>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                      <td>@mdo</td>
+                        <th scope="row">{{++$key}}</th>
+                        <td>{{$product->product_name}}</td>
+                        <td>{{$product->quantity_in_stock}}</td>
+                        <td>{{$product->price_per_item}}</td>
+                        <td>{{$product_sum}}</td>
+                    </tr>
+                    @endforeach
+                    <tr>
+                      <td colspan="4">Total Value Number</td>
+                      <td>{{$sum}}</td>
                   </tr>
               </tbody>
           </table>
