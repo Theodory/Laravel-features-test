@@ -66,5 +66,41 @@
         </div>
     </div>
 </div>
+
+{{-- For Table
+   --}}
+
+   <div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">{{ __('custom.welcome') }}</div>
+
+                <div class="card-body">
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">Product Name</th>
+                          <th scope="col">Quantity In Stock</th>
+                          <th scope="col">Price Per Item</th>
+                          <th scope="col">Total Value Number</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                      <td>@mdo</td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+</div>
+</div>
+</div>
 @endsection
 
