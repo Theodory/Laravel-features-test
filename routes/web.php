@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('products');
-});
+// Route::get('/', function () {
+//     return view('products');
+// });
 
-Route::resource('products','ProductController');
+Route::resource('/','ProductController');
